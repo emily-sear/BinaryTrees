@@ -70,12 +70,23 @@ void BinaryTree::visitInOrder(Node* root)
 
 }
 
-void BinaryTree::visitPostOrder()
+void BinaryTree::visitPostOrder(Node* root)
 {
-
+    if(root != NULL)
+    {
+        visitPostOrder(root->getLeftChild());
+        visitPostOrder(root->getRightChild());
+        cout << root->getValue() << " ";
+    }
 }
 
-void BinaryTree::visitPreOrder()
+void BinaryTree::visitPreOrder(Node* root)
 {
+    if(root != NULL)
+    {
+        cout << root->getValue() << " ";
+        visitPostOrder(root->getLeftChild());
+        visitPostOrder(root->getRightChild());
+    }
 
 }

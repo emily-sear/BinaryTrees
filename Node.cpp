@@ -1,8 +1,12 @@
 #include "Node.hpp"
+#include <stdlib.h>
 
 Node::Node(int value)
 {
     this->value = value;
+    this->leftChild = NULL;
+    this->rightChild = NULL;
+    this->parent = NULL;
 }
 int Node::getValue()
 {

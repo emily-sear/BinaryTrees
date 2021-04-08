@@ -22,6 +22,12 @@ int main(int argc, char** argv)
     tree->visitInOrder(tree->getRoot());
     cout << endl;
 
+    tree->visitPostOrder(tree->getRoot());
+    cout << endl;
+
+    tree->visitPreOrder(tree->getRoot());
+    cout << endl;
+
     return 0;
 
 }

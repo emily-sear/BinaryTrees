@@ -12,6 +12,6 @@ class BinaryTree
         Node* getRoot();
         void setRoot(Node* root);
         void visitInOrder(Node* root);
-        void visitPostOrder();
-        void visitPreOrder();
+        void visitPostOrder(Node* root);
+        void visitPreOrder(Node* root);
 };
